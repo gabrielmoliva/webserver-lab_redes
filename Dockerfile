@@ -1,5 +1,5 @@
 # Use a imagem base do Python
-FROM python:3.9-slim
+FROM python:3-slim
 
 # Define o diretório de trabalho dentro do contêiner
 WORKDIR /usr/src/app
@@ -16,4 +16,4 @@ RUN pip install flask
 EXPOSE 61015
 
 # Define o comando a ser executado quando o contêiner for iniciado
-CMD ["python", "main.py"]
+CMD ["python3", "main.py"]
