@@ -11,5 +11,8 @@ COPY templates ./templates
 # Instala as dependências do Flask
 RUN pip install flask
 
+# Define a porta que será exposta pelo contêiner
+EXPOSE 61015
+
 # Define o comando a ser executado quando o contêiner for iniciado
 CMD ["python", "main.py"]
