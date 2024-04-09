@@ -9,6 +9,7 @@ COPY main.py .
 COPY templates ./templates
 
 # Instala as dependências do Flask
+RUN pip install --upgrade pip
 RUN pip install flask
 
 # Define a porta que será exposta pelo contêiner
