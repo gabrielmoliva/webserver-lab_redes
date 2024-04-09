@@ -1,16 +1,9 @@
 # Use a imagem base do Python
-FROM python:3-slim
-
-# Define o diretório de trabalho dentro do contêiner
-WORKDIR /usr/src/app
+FROM  nginx:1.24.0-alpine-slim
 
 # Copia os arquivos necessários para o contêiner
-COPY main.py .
-COPY templates ./templates
-
-# Instala as dependências do Flask
-RUN pip install --upgrade pip
-RUN pip install flask
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY index.html /usr/share/nginx/html
 
 # Define a porta que será exposta pelo contêiner
 EXPOSE 61015
